@@ -144,14 +144,14 @@
         console.log("minutes until train: " + minutesTillTrain);
 
         var nextTrain = moment().add(minutesTillTrain, "minutes");
-        console.log("Next arrival: " + moment(nextTrain).format("HH:mm A"));
+        console.log("Next arrival: " + moment(nextTrain).format("h:mm A"));
 
 
         var newRow = $("<tr>").append(
             $("<td>").text(trainName),
             $("<td>").text(destination),
             $("<td>").text(frequency),
-            $("<td>").text(moment(nextTrain).format("HH:mm A")),
+            $("<td>").text(moment(nextTrain).format("h:mm A")),
             $("<td>").text(minutesTillTrain)
         );
         
